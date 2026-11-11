@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F3F6F8;--surface:#FFFFFF;--ink:#0F2A43;--muted:#4A6074;--line:#D5DEE5;--teal:#1F7A8C;--teal-soft:#DCEEF1;--gold:#B7791F;--navy:#0F2A43;--on-navy:#F3F6F8;
+:root{--bg:#F3F6F8;--surface:#FFFFFF;--ink:#0F2A43;--muted:#4A6074;--line:#D5DEE5;--teal:#1F7A8C;--teal-soft:#DCEEF1;--gold:#4FB3C6;--navy:#0F2A43;--on-navy:#F3F6F8;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1620;--surface:#13222F;--ink:#E8EEF2;--muted:#9DB0BF;--line:#243646;--teal:#5FB8C9;--teal-soft:#16343D;--gold:#E3A94B;--navy:#13222F;--on-navy:#E8EEF2;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0B1620;--surface:#13222F;--ink:#E8EEF2;--muted:#9DB0BF;--line:#243646;--teal:#5FB8C9;--teal-soft:#16343D;--gold:#E3A94B;--navy:#13222F;--on-navy:#E8EEF2;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1620;--surface:#13222F;--ink:#E8EEF2;--muted:#9DB0BF;--line:#243646;--teal:#5FB8C9;--teal-soft:#16343D;--gold:#7CCFDD;--navy:#13222F;--on-navy:#E8EEF2;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0B1620;--surface:#13222F;--ink:#E8EEF2;--muted:#9DB0BF;--line:#243646;--teal:#5FB8C9;--teal-soft:#16343D;--gold:#7CCFDD;--navy:#13222F;--on-navy:#E8EEF2;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:18px;line-height:1.65}
@@ -25,7 +25,7 @@ nav a{color:var(--muted);text-decoration:none}
 nav a:hover{color:var(--ink)}
 nav strong{font-weight:800;color:var(--ink)}
 .hero{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;padding:40px 0 72px}
-.hero h1{font-size:clamp(44px,7vw,84px);line-height:.98;margin:0 0 20px;font-weight:800;letter-spacing:-.02em}
+.hero h1{font-size:clamp(32px,4.6vw,54px);line-height:1.08;margin:0 0 20px;font-weight:800;letter-spacing:-.02em}
 .hero .role{font-family:"Bricolage Grotesque",Arial,sans-serif;font-size:20px;font-weight:500;color:var(--teal);margin:0 0 18px}
 .hero p.lead{max-width:34em;color:var(--muted);margin:0 0 28px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
@@ -77,6 +77,17 @@ section>.wrap>.intro{color:var(--muted);max-width:38em;margin:0 0 36px}
 .case p{margin:0 0 20px;color:var(--muted);font-size:16px;flex:1}
 .case span{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:700;font-size:15px;color:var(--teal)}
 .case:hover{border-color:var(--teal)}
+.cat{font-family:"Bricolage Grotesque",Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);margin:0 0 4px}
+.case{border-top-width:5px}.case .more{margin:0 0 18px;border-top:1px solid var(--line);padding-top:14px}
+.case summary{cursor:pointer;font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:700;font-size:16px;color:var(--teal)}
+.case .more h4{font-family:"Bricolage Grotesque",Arial,sans-serif;font-size:15px;margin:16px 0 6px}
+.case .more ul{margin:0;padding-left:20px;font-size:16px}.case .more li{margin:0 0 4px}
+.badge{font-family:"Bricolage Grotesque",Arial,sans-serif;font-size:12px;font-weight:700;background:var(--teal-soft);padding:2px 8px;border-radius:4px;margin-right:6px;white-space:nowrap}
+.note{font-size:15px;color:var(--muted);margin:-12px 0 24px;max-width:46em}
+.case .clink{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:700;font-size:15px;color:var(--teal)}
+.tgroup{margin:0 0 14px}.tgroup h4{font-family:"Bricolage Grotesque",Arial,sans-serif;font-size:14px;color:var(--muted);margin:0 0 6px;font-weight:500}
+.connect small{display:block;font-weight:500;font-size:12.5px;line-height:1.3;margin-top:6px;opacity:.85}
+.target{color:#B8C7D3;margin:18px 0 0;font-size:16px}
 .connect{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
 .connect div{background:var(--navy);color:var(--on-navy);border-radius:10px;padding:16px 10px;text-align:center;font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:700;font-size:15px}
 .connect div b{display:block;font-size:30px;line-height:1;color:var(--gold);margin-bottom:6px}
@@ -116,18 +127,19 @@ nav .links{gap:14px;font-size:15px}
 
 <header class="hero">
 <div>
-<h1>Chioma Odnoali</h1>
-<p class="role">Customer Success Associate and Onboarding Specialist</p>
-<p class="lead">I help new customers get set up, reach value quickly and stay engaged. I have onboarded over 1,500 learners, driven 98% learning platform adoption and improved student retention by 20%. Nine years in student success, now focused on SaaS, technology and EdTech.</p>
-<div class="btns"><a class="btn primary" href="#work">See my case studies</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+<h1>Turning customer experiences into measurable business outcomes.</h1>
+<p class="role">Chioma Odnoali | Customer Success Professional and Onboarding Specialist</p>
+<p class="lead">Customer Success and Onboarding professional with experience in customer engagement, onboarding, relationship management, product adoption, retention and stakeholder coordination. I help businesses improve customer experiences, spot risks early and build relationships that last.</p>
+<div class="btns"><a class="btn primary" href="#work">View my work</a><a class="btn ghost" href="Chioma_Odnoali_CV.pdf" download>Download my CV</a><a class="btn ghost" href="#contact">Let’s connect</a></div>
 </div>
-<aside class="panel" aria-label="Onboarding results">
-<h2>Onboarding scorecard</h2>
+<aside class="panel" aria-label="Professional impact">
+<h2>Professional impact</h2>
 <p class="sub">Results at Digital Witch IT Support Community, 1,500+ learners onboarded</p>
 <div class="meter"><div class="row"><span>Onboarding completion</span><b>95%</b></div><div class="bar"><i style="width:95%"></i></div></div>
 <div class="meter"><div class="row"><span>Learning platform adoption</span><b>98%</b></div><div class="bar"><i style="width:98%"></i></div></div>
 <div class="meter"><div class="row"><span>Activation within 48 hours</span><b>90%</b></div><div class="bar"><i style="width:90%"></i></div></div>
 <div class="meter"><div class="row"><span>Student-record accuracy</span><b>98%</b></div><div class="bar"><i style="width:98%"></i></div></div>
+<div class="meter"><div class="row"><span>Early engagement improvement</span><b>25%</b></div><div class="bar"><i style="width:25%"></i></div></div>
 <span class="status">Open to remote roles</span>
 </aside>
 </header>
@@ -156,31 +168,30 @@ nav .links{gap:14px;font-size:15px}
 <h2>Experience</h2>
 <p class="intro">Most recent first.</p>
 <ol class="timeline">
-<li class="now"><h3>Onboarding Specialist, Student Success and Learning Operations</h3><p class="where">Digital Witch IT Support Community, Remote | September 2026 to present</p>
+<li class="now"><p class="cat">Customer Success and Onboarding</p><h3>Onboarding Specialist, Student Success and Learning Operations</h3><p class="where">Digital Witch IT Support Community, Remote | September 2026 to present</p>
 <ul><li>Onboarded over 1,500 students across IT Support, Data Analysis and Customer Support programmes, achieving 95% onboarding completion.</li><li>Drove 98% learning platform adoption, with 90% of new learners activated within 48 hours.</li><li>Maintained 98% accuracy in student records through consistent CRM updates and progress tracking.</li><li>Improved early student engagement by 25% through proactive follow-ups and timely intervention.</li><li>Originated two revenue-generating initiatives, higher-institution admission partnerships and a teacher mentorship programme, contributing to 30% revenue growth.</li></ul></li>
-<li><h3>Sales and Lead Generation Associate</h3><p class="where">Sales Enablement Academy, Remote | June 2026 to September 2026</p>
+<li><p class="cat">Sales Development and Customer Acquisition</p><h3>Sales and Lead Generation Associate</h3><p class="where">Sales Enablement Academy, Remote | June 2026 to September 2026</p>
 <ul><li>Generated and qualified over 1,500 leads through prospect research, outbound calling and customer discovery.</li><li>Booked 50+ appointments, connecting qualified prospects with the sales team.</li><li>Nurtured leads and supported sales handoffs.</li></ul></li>
-<li><h3>Student Success Manager</h3><p class="where">Monte’Crest International School | January 2017 to December 2025</p>
+<li><p class="cat">Account Management and Relationship Building</p><h3>Student Success Manager</h3><p class="where">Monte’Crest International School | January 2017 to December 2025</p>
 <ul><li>Managed a portfolio of 200+ students per session, monitoring performance, engagement and support needs.</li><li>Increased student retention by 20% through personalised learning strategies and targeted interventions.</li><li>Worked with teachers to match teaching approaches to students’ learning styles.</li><li>Kept parents and teachers informed and wrote structured progress reports that flagged risks.</li></ul></li>
 </ol>
 </div></section>
 
 <section id="work"><div class="wrap">
 <h2>Case studies</h2>
-<p class="intro">Three group case studies from my Customer Success training, each for a different company. Each opens in Canva.</p>
+<p class="intro">Three group case studies from my Customer Success training, each for a different company. Open one to see the problem, the evidence and the recommendation.</p>
+<p class="note"><span class="badge">Case figure</span>comes from the case brief. <span class="badge">Proposed</span>is a recommendation to test, not a result.</p>
 <div class="cases">
-<a class="case" href="https://canva.link/3itzi8vjddalda3" target="_blank" rel="noopener"><p class="tag">Group case study | Customer health at scale</p><h3>Okonkwo FinTech: BukkiBooks</h3><div class="cols"><div><h4>The problem</h4><p>A fashion retail customer still looked active, but had stopped using Inventory Reconciliation for five weeks because a new store manager was never trained. Customer Success could not check every account by hand to catch this earlier.</p></div><div><h4>What we recommended</h4><p>An early-warning process: monitor usage, detect meaningful changes, prioritise accounts, investigate the root cause, act, follow up and record the outcome. A usage drop is a signal to investigate, not proof the customer will leave.</p></div></div><ul class="stats"><li>5-week adoption gap found</li><li>Moniepoint, Paystack and Bumpa researched</li><li>7 proposed KPIs</li></ul><span>View the full case study in Canva</span></a>
-<a class="case" href="https://canva.link/2flj4cf5r3jx057" target="_blank" rel="noopener"><p class="tag">Group case study | Onboarding, feedback and journey</p><h3>Sunrise Digital MFB</h3><div class="cols"><div><h4>The problem</h4><p>Only 5,120 of 42,600 sign-ups became active customers after 30 days. Over half of verified customers never made a first deposit, and complaints about failed transfers, repeated logouts and support were scattered across channels with no owner.</p></div><div><h4>What we recommended</h4><p>A seven-step onboarding flow with save-and-resume verification, plain account names and instant confirmations. A feedback process with one owner, a fix for each customer and for the root cause, and a journey map that shows where trust breaks.</p></div></div><ul class="stats"><li>12.02% 30-day yield</li><li>52.99% first-deposit drop-off</li><li>461 feedback items in 2 months</li></ul><span>View the full case study in Canva</span></a>
-<a class="case" href="https://canva.link/9ua1fuh5itjb254" target="_blank" rel="noopener"><p class="tag">Group case study | Merchant recovery and retention</p><h3>Akwete Pay</h3><div class="cols"><div><h4>The problem</h4><p>312 of 2,400 market merchants went quiet in three months, against about 96 in a normal quarter. Volume fell from ₦6.2bn to ₦4.9bn and failed transactions rose from 2% to 7%. One key merchant was down 65% with ₦410,000 in pending reversals.</p></div><div><h4>What we recommended</h4><p>Fix service first, not prices: interviews showed 29 of 40 merchants cited late settlement or slow reversals, and 7 cited competitor fees. A step-by-step recovery plan for the key merchant, a 90-day roadmap and a merchant tracker.</p></div></div><ul class="stats"><li>312 of 2,400 merchants went quiet</li><li>72.5% cited service, 17.5% cited price</li><li>90-day recovery roadmap</li></ul><span>View the full case study in Canva</span></a>
+<article class="case"><p class="tag">Group case study | Customer health at scale</p><h3>Okonkwo FinTech: BukkiBooks</h3><div class="cols"><div><h4>The problem</h4><p>A fashion retail customer still looked active, but had stopped using Inventory Reconciliation for five weeks because a new store manager was never trained. Customer Success could not check every account by hand to catch this earlier.</p></div><div><h4>What we recommended</h4><p>An early-warning process: monitor usage, detect meaningful changes, prioritise accounts, investigate the root cause, act, follow up and record the outcome. A usage drop is a signal to investigate, not proof the customer will leave.</p></div></div><ul class="stats"><li>5-week adoption gap found</li><li>Moniepoint, Paystack and Bumpa researched</li><li>RISE and Five Ps frameworks</li></ul><details class="more"><summary>Read the full breakdown</summary><h4>What the case showed</h4><ul><li><span class="badge">Case figure</span>The customer, a fashion business with 3 stores and an online shop, was 8 months into using BukkiBooks and still looked active.</li><li><span class="badge">Case figure</span>It had stopped using Inventory Reconciliation for 5 weeks because a new store manager was never trained.</li><li>Two problems: the customer needed training, and Okonkwo had no scalable way to detect this kind of gap.</li></ul><h4>What we recommended</h4><ul><li>A process to monitor usage, detect meaningful change, flag and prioritise accounts, investigate the cause, intervene, follow up and record the result.</li><li>Signals to watch: activity, feature use, transaction volume, usage trends and support activity.</li><li>Clear roles for Customer Success (adoption and value) and Support (fixing specific issues), who share what they see.</li></ul><h4>Proposed, not yet proven</h4><ul><li><span class="badge">Proposed</span>KPIs such as feature adoption rate, usage decline rate, usage recovery rate and time to intervention.</li><li><span class="badge">Proposed</span>Warning thresholds to be tested on 6 to 12 months of Okonkwo’s own data. A usage drop is a reason to investigate, not proof of churn.</li></ul></details><a class="clink" href="https://canva.link/3itzi8vjddalda3" target="_blank" rel="noopener">View the full case study in Canva</a></article>
+<article class="case"><p class="tag">Group case study | Onboarding, feedback and journey</p><h3>Sunrise Digital MFB</h3><div class="cols"><div><h4>The problem</h4><p>Only 5,120 of 42,600 sign-ups became active customers after 30 days. Over half of verified customers never made a first deposit, and complaints were scattered across channels with no owner.</p></div><div><h4>What we recommended</h4><p>A seven-step onboarding flow, a feedback process with one owner, and a journey map that shows where trust breaks.</p></div></div><ul class="stats"><li>12.02% 30-day yield</li><li>52.99% first-deposit drop-off</li><li>461 feedback items in 2 months</li></ul><details class="more"><summary>Read the full breakdown</summary><h4>What the case showed</h4><ul><li><span class="badge">Case figure</span>42,600 sign-ups produced 5,120 active customers after 30 days (12.02%).</li><li><span class="badge">Case figure</span>The BVN/NIN step lost 11,350 people, and 52.99% of verified customers never made a first deposit.</li><li><span class="badge">Case figure</span>461 pieces of feedback in two months were spread across three channels with no owner. Themes: failed transfers, repeated logouts and hard-to-reach support.</li></ul><h4>What we recommended</h4><ul><li>A seven-step onboarding flow with save-and-resume verification, plain account names and instant confirmations.</li><li>A feedback process with one owner that fixes the individual customer and the root cause.</li><li>A customer journey map that shows where trust breaks.</li></ul><h4>Baselines to improve on</h4><ul><li><span class="badge">Case figure</span>Terms to first deposit: 47.01%. 30-day activation: 54.82%.</li></ul></details><a class="clink" href="https://canva.link/2flj4cf5r3jx057" target="_blank" rel="noopener">View the full case study in Canva</a></article>
+<article class="case"><p class="tag">Group case study | Merchant recovery and retention</p><h3>Akwete Pay</h3><div class="cols"><div><h4>The problem</h4><p>312 of 2,400 market merchants went quiet in three months, against about 96 in a normal quarter. Volume fell from ₦6.2bn to ₦4.9bn and failed transactions rose from 2% to 7%.</p></div><div><h4>What we recommended</h4><p>Fix service first, not prices. A recovery plan for the priority merchant, a 90-day roadmap and a merchant tracker.</p></div></div><ul class="stats"><li>312 of 2,400 merchants went quiet</li><li>72.5% cited service, 17.5% cited price</li><li>90-day recovery roadmap</li></ul><details class="more"><summary>Read the full breakdown</summary><h4>What the case showed</h4><ul><li><span class="badge">Case figure</span>312 of 2,400 merchants went quiet in three months, against about 96 in a normal quarter.</li><li><span class="badge">Case figure</span>Volume fell from ₦6.2bn to ₦4.9bn and failed transactions rose from 2% to 7%.</li><li><span class="badge">Case figure</span>Of 40 merchants interviewed, 29 (72.5%) cited late settlement or slow reversals and 7 (17.5%) cited competitor fees.</li></ul><h4>What we recommended</h4><ul><li>Fix service first instead of cutting prices.</li><li>Segment merchants, listen, resolve, confirm and retain.</li><li>A step-by-step recovery plan for the priority merchant, a 90-day roadmap and a merchant tracker.</li></ul><h4>Proposed, not yet proven</h4><ul><li><span class="badge">Proposed</span>Retention targets and reactivation goals are proposals for the business to test.</li></ul></details><a class="clink" href="https://canva.link/9ua1fuh5itjb254" target="_blank" rel="noopener">View the full case study in Canva</a></article>
 </div>
 </div></section>
 
 <section id="method"><div class="wrap">
-<h2>How I handle difficult conversations</h2>
-<p class="intro">I built the CONNECT framework during sales training. It works the same way on a frustrated customer as on a hesitant prospect.</p>
-<div class="connect" role="list">
-<div role="listitem"><b>C</b>Clarify</div><div role="listitem"><b>O</b>Own</div><div role="listitem"><b>N</b>Navigate</div><div role="listitem"><b>N</b>Notice</div><div role="listitem"><b>E</b>Empathize</div><div role="listitem"><b>C</b>Communicate</div><div role="listitem"><b>T</b>Transform</div>
-</div>
+<h2>My professional approach: the CONNECT framework</h2>
+<p class="intro">A practical way I handle a frustrated customer or a hesitant prospect. I built it during sales training.</p>
+<div class="connect" role="list"><div role="listitem"><b>C</b>Clarify<small>the problem</small></div><div role="listitem"><b>O</b>Own<small>the responsibility</small></div><div role="listitem"><b>N</b>Navigate<small>possible solutions</small></div><div role="listitem"><b>N</b>Notice<small>underlying concerns</small></div><div role="listitem"><b>E</b>Empathize<small>with the customer</small></div><div role="listitem"><b>C</b>Communicate<small>clearly</small></div><div role="listitem"><b>T</b>Transform<small>the experience</small></div></div>
 </div></section>
 
 <section id="skills"><div class="wrap">
@@ -188,10 +199,8 @@ nav .links{gap:14px;font-size:15px}
 <p class="intro">&nbsp;</p>
 <div class="skills">
 <div>
-<h3>Core skills</h3>
-<ul class="chips"><li>Customer success management</li><li>Customer onboarding and activation</li><li>Customer journey management</li><li>Account management</li><li>Product adoption</li><li>Engagement and retention</li><li>Customer health monitoring</li><li>Risk identification and escalation</li><li>Stakeholder relationships</li><li>CRM management</li><li>KPI tracking and reporting</li><li>Lead generation and qualification</li><li>Sales handoffs</li><li>Cross-functional collaboration</li></ul>
-<h3>Tools</h3>
-<ul class="chips"><li>HubSpot</li><li>Salesforce</li><li>Gainsight</li><li>Zendesk</li><li>Freshdesk</li><li>Intercom</li><li>Apollo</li><li>Zapier</li><li>Calendly</li><li>Asana</li><li>Trello</li><li>Monday.com</li><li>Google Workspace</li><li>Microsoft Teams</li><li>Slack</li><li>Microsoft Excel</li></ul>
+<h3>Core competencies</h3><div class="tgroup"><h4>Onboarding and adoption</h4><ul class="chips"><li>Customer onboarding and activation</li><li>Product adoption</li><li>Customer journey management</li></ul></div><div class="tgroup"><h4>Retention and risk</h4><ul class="chips"><li>Customer health monitoring</li><li>Risk identification and escalation</li><li>Engagement and retention</li></ul></div><div class="tgroup"><h4>Relationships and communication</h4><ul class="chips"><li>Account management</li><li>Stakeholder relationships</li><li>Cross-functional collaboration</li></ul></div><div class="tgroup"><h4>Data and operations</h4><ul class="chips"><li>CRM management</li><li>KPI tracking and reporting</li><li>Lead qualification and sales handoffs</li></ul></div>
+<h3>Tools by function</h3><div class="tgroup"><h4>CRM and customer success</h4><ul class="chips"><li>HubSpot</li><li>Salesforce</li><li>Gainsight</li></ul></div><div class="tgroup"><h4>Customer support</h4><ul class="chips"><li>Zendesk</li><li>Freshdesk</li><li>Intercom</li></ul></div><div class="tgroup"><h4>Sales and automation</h4><ul class="chips"><li>Apollo</li><li>Zapier</li><li>Calendly</li></ul></div><div class="tgroup"><h4>Project management</h4><ul class="chips"><li>Asana</li><li>Trello</li><li>Monday.com</li></ul></div><div class="tgroup"><h4>Communication</h4><ul class="chips"><li>Slack</li><li>Microsoft Teams</li></ul></div><div class="tgroup"><h4>Productivity and reporting</h4><ul class="chips"><li>Google Workspace</li><li>Microsoft Excel</li></ul></div>
 </div>
 <div>
 <h3>Certifications and training</h3>
@@ -210,12 +219,14 @@ nav .links{gap:14px;font-size:15px}
 
 <section id="contact" class="contact"><div class="wrap">
 <h2>Let’s talk</h2>
-<p class="intro">I am looking for a remote Customer Success or Onboarding role. The quickest way to reach me is email.</p>
+<p class="intro">I am looking for a remote Customer Success role. The quickest way to reach me is email.</p>
 <div class="lines btnrow">
+<a class="cbtn" href="Chioma_Odnoali_CV.pdf" download>Download my CV</a>
 <a class="cbtn" href="mailto:chiomaodnoali@gmail.com">Email: chiomaodnoali@gmail.com</a>
 <a class="cbtn" href="tel:+2349132960605">Call: +234 913 2960 605</a>
 <a class="cbtn" href="https://www.linkedin.com/in/chioma-odnoali-1972643aa" target="_blank" rel="noopener">LinkedIn: Chioma Odnoali</a>
 </div>
+<p class="target">Target roles: Customer Success, Customer Onboarding and Client Success at SaaS, technology and EdTech companies. Available for remote work.</p>
 </div></section>
 <div class="wrap"><footer>Chioma Odnoali | Port Harcourt, Nigeria | Open to remote work</footer></div>
 </body>
